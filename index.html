@@ -12,13 +12,28 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <form onsubmit="app.controllers.playerCtrl.search(e)">
-                <input type="text" placeholder="search" name="query">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <form onsubmit="app.controllers.playerCtrl.search(event)" class="form-inline">
+                <input type="text" placeholder="search" name="query" class="mr-sm-2">
+                <select class="form-control mr-sm-2" name="choice">
+                    <option>name</option>
+                    <option>position</option>
+                    <option>team</option>
+                </select>
                 <button type="submit">Search Now</button>
             </form>
         </div>
+        <panel>
+            <header>Search Results</header>
+            <div class="player-roster" id="player-roster">
+                
+            </div>
+            <header>My NFL Team</header>
+            <div class="my-team" id="my-team">
+
+            </div>
+        </panel>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
