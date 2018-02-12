@@ -1,4 +1,31 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1512145559054-d62d208cd151?ixlib=rb-0.3.5&s=72d769f8ca9334cf6e0723e0202babfc&auto=format&fit=crop&w=1489&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
 .player-card {
   display: inline-block;
-  border: 1px solid black;
+  margin-bottom: 1rem;
+  outline: 1px solid white;
+}
+
+.table-format {
+  width: 100%;
+  text-align: center;
+}
+
+.tr-format {
+  outline: 1px solid white;
+}
+
+.header-format {
+  font-size: 2rem;
+}
+
+.title-format {
+  height: 50vh;
 }

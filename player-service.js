@@ -163,6 +163,13 @@ function PlayerService(callback) {
             abrev: 'sf'
         }
     ]
+    var positionDic = {
+        "running back": "rb",
+        "quarterback": "qb",
+        "wide receiver": "wr",
+        "tight end": "te",
+        "defense": "d"
+    }
 
     function loadPlayersData() {
 
@@ -192,9 +199,7 @@ function PlayerService(callback) {
         });
     }
     loadPlayersData()
-    console.log(playersData)
     filterPlayers()
-    console.log(playersData)
 
     function filterPlayers() {
         for (let i = 0; i < playersData.length; i++) {
@@ -278,5 +283,19 @@ function PlayerService(callback) {
                 return val
             }
         }
+        return val
+    }
+
+    this.checkPositionDic = function checkPositionDic(val){
+        for (var prop in positionDic){
+            if (prop == val){
+                val = positionDic[prop]
+            }
+        }
+        return val
+    }
+
+    this.resetMyTeam = function resetMyTeam(){
+        myTeam = []
     }
 }

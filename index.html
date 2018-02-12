@@ -13,29 +13,27 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex flex-column justify-content-center align-items-center title-format" id="first-draw">
+            <h1>Fantasy Football Seach</h1>
             <form onsubmit="app.controllers.playerCtrl.search(event)" class="form-inline">
-                <input type="text" placeholder="search" name="query" class="mr-sm-2">
-                <select class="form-control mr-sm-2" name="choice">
+                <input type="text" placeholder="search" name="query" class="mr-2">
+                <select class="form-control mr-2" name="choice">
                     <option>name</option>
                     <option>position</option>
                     <option>team</option>
                 </select>
-                <button type="submit">Search Now</button>
+                <button type="submit" id="submit-btn">Search Now</button>
             </form>
+            <h5>Search for players by position, team, or name</h5>
+            <h5>Add 9 players to form your fantasy team from the NFL roster!</h5>
         </div>
-        <panel>
-            <header>Search Results</header>
-            <div class="player-roster" id="player-roster">
-                
-            </div>
-            <header>My NFL Team</header>
-            <div class="my-team" id="my-team">
+        <div class="row d-flex justify-content-center" id="my-team">
 
-            </div>
-        </panel>
+        </div>
+        <div class="row player-roster" id="player-roster">
+            
+        </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="player-service.js"></script>
     <script src="player-controller.js"></script>
